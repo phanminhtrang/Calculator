@@ -25,50 +25,57 @@ namespace Calculator
             int tong;
             Random rand = new Random();
 
-            if (rad11.Checked || rad3.Checked)
+            try
             {
-                //random ra số
-                so1 = rand.Next(1, 7); //0-6
-                so2 = rand.Next(1, 7);
-                so3 = rand.Next(1, 7);
-                tong = so1 + so2 + so3;
-
-                //Hiển thị ra form
-                lbSo1.Text = so1.ToString();
-                lbSo2.Text = so2.ToString();
-                lbSo3.Text = so3.ToString();
-
-                //Kiểm tra lựa chọn của người chơi
-                if (rad3.Checked) //Chọn 3 - 10
+                if (rad11.Checked || rad3.Checked)
                 {
-                    if (tong >= 3 && tong <= 10) //Đúng
-                    {
-                        diem += 10;
-                    }
-                    else //Sai
-                    {
-                        diem -= 10;
-                    }
+                    //random ra số
+                    so1 = rand.Next(1, 7); //0-6
+                    so2 = rand.Next(1, 7);
+                    so3 = rand.Next(1, 7);
+                    tong = so1 + so2 + so3;
 
+                    //Hiển thị ra form
+                    lbSo1.Text = so1.ToString();
+                    lbSo2.Text = so2.ToString();
+                    lbSo3.Text = so3.ToString();
+
+                    //Kiểm tra lựa chọn của người chơi
+                    if (rad3.Checked) //Chọn 3 - 10
+                    {
+                        if (tong >= 3 && tong <= 10) //Đúng
+                        {
+                            diem += 10;
+                        }
+                        else //Sai
+                        {
+                            diem -= 10;
+                        }
+
+                    }
+                    else //Chọn 11 - 18
+                    {
+                        if (tong >= 11 && tong <= 18) //Đúng
+                        {
+                            diem += 10;
+                        }
+                        else //Sai
+                        {
+                            diem -= 10;
+                        }
+
+                    }
+                    //Hiển thị điểm ra form
+                    lbDiem.Text = diem.ToString();
                 }
-                else //Chọn 11 - 18
+                else
                 {
-                    if (tong >= 11 && tong <= 18) //Đúng
-                    {
-                        diem += 10;
-                    }
-                    else //Sai
-                    {
-                        diem -= 10;
-                    }
-
+                    MessageBox.Show("Phải chọn 1 trong 2 đáp án!!");
                 }
-                //Hiển thị điểm ra form
-                lbDiem.Text = diem.ToString();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Phải chọn 1 trong 2 đáp án!!");
+                MessageBox.Show(ex.Message);
             }
         }
 
