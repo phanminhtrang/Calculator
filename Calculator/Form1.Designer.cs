@@ -40,6 +40,7 @@ namespace Calculator
             this.lbSo2 = new System.Windows.Forms.Label();
             this.lbSo1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,12 +176,25 @@ namespace Calculator
             this.label1.TabIndex = 5;
             this.label1.Text = "ỨNG DỤNG ĐOÁN SỐ";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DeepPink;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Location = new System.Drawing.Point(52, 562);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(793, 53);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "THOÁT";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(893, 553);
+            this.ClientSize = new System.Drawing.Size(893, 634);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.byQuaySo);
             this.Controls.Add(this.btChoiLai);
@@ -191,6 +205,7 @@ namespace Calculator
             this.Controls.Add(this.lbSo1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -212,6 +227,7 @@ namespace Calculator
         private System.Windows.Forms.Label lbSo2;
         private System.Windows.Forms.Label lbSo1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
