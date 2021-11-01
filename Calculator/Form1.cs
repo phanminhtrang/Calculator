@@ -116,5 +116,14 @@ namespace Calculator
                 rad.BackColor = Color.DeepPink;
             }
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn thoát game?", "Thoát game", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }    
+        }
     }
 }
