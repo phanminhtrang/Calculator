@@ -117,6 +117,7 @@ namespace Calculator
             }
         }
 
+<<<<<<< HEAD
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Bạn muốn thoát game?", "Thoát game", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -124,6 +125,16 @@ namespace Calculator
             {
                 e.Cancel = true;
             }    
+=======
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn thoát game?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }    
+
+>>>>>>> b1e98552e7ef1f000eab59b8fe2bf64b2ee744f3
         }
     }
 }
